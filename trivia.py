@@ -1,4 +1,7 @@
 #!/usr/bin/env python3
+import random
+import sys
+
 
 class Game:
     def __init__(self):
@@ -146,6 +149,9 @@ class Game:
 from random import randrange
 
 if __name__ == '__main__':
+    if len(sys.argv) == 2:
+        random.seed(int(sys.argv[1]))
+
     not_a_winner = False
 
     game = Game()
